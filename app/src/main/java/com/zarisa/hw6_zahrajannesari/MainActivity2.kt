@@ -32,18 +32,19 @@ class MainActivity2 : AppCompatActivity(){
                 }
             }
             player1Turn = true
+            binding2.textViewResult.text="result"
+            roundCount=0
         }
     }
 
     private fun eachButtonOnClick(view: Button) {
-        if ((view as Button).text.isBlank()) {
+        if (view.text.isBlank()&&binding2.textViewResult.text=="result") {
             if (player1Turn) {
                 view.text = "X"
             } else {
                 view.text = "O"
             }
             roundCount++
-
             if(checkWinner()){
                 if (player1Turn) {
                     binding2.textViewResult.text = "player X winner"
@@ -51,7 +52,7 @@ class MainActivity2 : AppCompatActivity(){
                 }
                 else{
                     binding2.textViewResult.text = "player O winner"
-                    Toast.makeText(this,"player X winner",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"player O winner",Toast.LENGTH_SHORT).show()
                 }
             } else if(roundCount==9) {
                 binding2.textViewResult.text = "Draw"
@@ -62,34 +63,28 @@ class MainActivity2 : AppCompatActivity(){
         }
     }
     private fun checkWinner():Boolean{
-        var checkArray = arrayOf<ArrayList<String>>(arrayListOf(), arrayListOf(), arrayListOf())
-        for (i in 0 until 3) {
-            for (j in 0 until 3) {
-                checkArray[i][j]=buttonArray[i][j].text.toString()
-            }
-        }
         for (column in 0 until 3){
-            if (checkArray[column][0]!=""
-                &&checkArray[column][0]==checkArray[column][1]
-                &&checkArray[column][0]==checkArray[column][2]){
+            if (buttonArray[column][0].text!=""
+                &&buttonArray[column][0].text==buttonArray[column][1].text
+                &&buttonArray[column][0].text==buttonArray[column][2].text){
                 return true
             }
         }
         for (row in 0 until 3){
-            if (checkArray[0][row]!=""
-                &&checkArray[0][row]==checkArray[0][row]
-                &&checkArray[0][row]==checkArray[0][row]){
+            if (buttonArray[0][row].text!=""
+                &&buttonArray[0][row].text==buttonArray[0][row].text
+                &&buttonArray[0][row].text==buttonArray[0][row].text){
                 return true
             }
         }
-        if (checkArray[0][0]!=""
-            &&checkArray[0][0]==checkArray[1][1]
-            &&checkArray[0][0]==checkArray[2][2]){
+        if (buttonArray[0][0].text!=""
+            &&buttonArray[0][0].text==buttonArray[1][1].text
+            &&buttonArray[0][0]==buttonArray[2][2]){
             return true
         }
-        if (checkArray[0][2]!=""
-            &&checkArray[0][2]==checkArray[1][1]
-            &&checkArray[0][2]==checkArray[2][0]){
+        if (buttonArray[0][2].text!=""
+            &&buttonArray[0][2].text==buttonArray[1][1].text
+            &&buttonArray[0][2].text==buttonArray[2][0].text){
             return true
         }
         return false
