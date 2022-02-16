@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HW6_ZahraJannesari</string>
+    <string name="poster1">poster1</string>
+    <string name="secondposter">secondposter</string>
 </resources>
