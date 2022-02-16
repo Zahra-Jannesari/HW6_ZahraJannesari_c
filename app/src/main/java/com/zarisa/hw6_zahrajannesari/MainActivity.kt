@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() ,RadioGroup.OnCheckedChangeListener {
         }
     }
     private fun registerButtonClick(){
-        Toast.makeText(this,"ok", Toast.LENGTH_LONG).show()
+        Toast.makeText(this,"Registered!", Toast.LENGTH_LONG).show()
         val editor = sharedpreferences!!.edit()
             editor.putString("fullName", binding.textFieldFullName.text.toString())
             editor.apply()
