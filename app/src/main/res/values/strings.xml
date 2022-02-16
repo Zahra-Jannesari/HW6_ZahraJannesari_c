@@ -2,4 +2,10 @@
     <string name="app_name">HW6_ZahraJannesari</string>
     <string name="poster1">poster1</string>
     <string name="secondposter">secondposter</string>
+    <string name="aladdin">Aladdin is a 2019 American musical fantasy drama film produced by Walt Disney Pictures. Directed by Guy Ritchie, from a script he co-wrote with John August, it is a live-action/CGI adaptation of Disney\'s 1992 animated film of the same name, which itself is based on the eponymous tale from One Thousand and One Nights.[1][a] The film stars Will Smith, Mena Massoud, Naomi Scott, Marwan Kenzari, Navid Negahban, Nasim Pedrad, Billy Magnussen, and Numan Acar, as well as the voices of Alan Tudyk and Frank Welker, the latter of whom reprises his roles from all previous media. The plot follows Aladdin, a street urchin, as he falls in love with Princess Jasmine, befriends a wish-granting Genie, and battles the wicked Jafar. In October 2016, Disney announced Ritchie would direct a live-action Aladdin remake. Smith was the first member of the cast to join, signing on to portray Genie in July 2017, and Massoud and Scott were confirmed for the two lead roles later that month. Principal photography began that September at Longcross Studios in Surrey, England, also filming in the Wadi Rum Desert in Jordan, and lasted until January 2018. Additional filming and pick-ups took place in August 2018. Aladdin was theatrically released in the United States on May 24, 2019. It grossed over $1 billion worldwide, making it the ninth highest-grossing film of 2019. The film received mixed reviews from critics, with praise for its music, costume design, and the performances of Smith, Massoud, and Scott, but criticism for Ritchie\'s direction, the CGI, and Kenzari\'s characterization of Jafar. A sequel is in development</string>
+    <string name="aladdin_2019">Aladdin (2019)</string>
+    <string name="may_8_2019">May 8, 2019</string>
+    <string name="rent_from_4_99">RENT FROM $4.99</string>
+    <string name="buy_from_9_99">Buy FROM $9.99</string>
+    <string name="_7_2">7.2</string>
 </resources>

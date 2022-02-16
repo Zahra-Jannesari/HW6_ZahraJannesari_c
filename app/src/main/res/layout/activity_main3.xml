@@ -6,26 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity3">
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/q3_round"
+        android:gravity="center"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.515" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.32" />
+        app:layout_constraintGuide_percent="0.28" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.22" />
+        app:layout_constraintGuide_percent="0.2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.37" />
+        app:layout_constraintGuide_percent="0.36" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -59,7 +73,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aladdin (2019)"
+        android:text="@string/aladdin_2019"
         android:textSize="15pt"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
@@ -73,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="May 8, 2019"
+        android:text="@string/may_8_2019"
         android:textSize="8pt"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.0"
@@ -81,10 +95,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
@@ -93,18 +109,24 @@
             android:id="@+id/button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:text="RENT FROM $4.99"
+            android:backgroundTint="#FFE91E63"
+            android:text="@string/rent_from_4_99"
             android:textSize="6pt"
-            android:layout_marginRight="10dp"/>
+            tools:ignore="TextContrastCheck"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Buy FROM $9.99"
-            android:textSize="6pt"/>
+            android:backgroundTint="#FFE91E63"
+            android:text="@string/buy_from_9_99"
+            android:textSize="6pt"
+            tools:ignore="TextContrastCheck"
+            style="?android:attr/buttonBarButtonStyle" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -114,6 +136,52 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.95" />
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/q3_round"
+        android:gravity="center"
+        android:padding="15dp"
+
+        android:text="@string/_7_2"
+        android:textColor="@color/white"
+        android:textSize="8pt"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.58" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.48" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline11">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/aladdin"
+            />
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
