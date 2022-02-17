@@ -36,9 +36,8 @@ class MainActivity2 : AppCompatActivity(){
             roundCount=0
         }
     }
-
     private fun eachButtonOnClick(view: Button) {
-        if (view.text.isBlank()&&binding2.textViewResult.text=="result") {
+        if (view.text.isEmpty() && binding2.textViewResult.text=="result") {
             if (player1Turn) {
                 view.text = "X"
             } else {
@@ -72,8 +71,8 @@ class MainActivity2 : AppCompatActivity(){
         }
         for (row in 0 until 3){
             if (buttonArray[0][row].text!=""
-                &&buttonArray[0][row].text==buttonArray[0][row].text
-                &&buttonArray[0][row].text==buttonArray[0][row].text){
+                &&buttonArray[0][row].text==buttonArray[1][row].text
+                &&buttonArray[0][row].text==buttonArray[2][row].text){
                 return true
             }
         }

@@ -47,25 +47,28 @@
                 android:id="@+id/button_00"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:text=""/>
+                android:layout_weight="1"
+                android:text=""
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
                 android:id="@+id/button_01"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:text=""/>
+                android:layout_weight="1"
+                android:text=""
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
                 android:id="@+id/button_02"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:text=""/>
+                android:layout_weight="1"
+                android:text=""
+                tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
 
         <LinearLayout
@@ -79,25 +82,28 @@
                 android:id="@+id/button_10"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:text=""/>
+                android:layout_weight="1"
+                android:text=""
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
                 android:id="@+id/button_11"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:text=""/>
+                android:layout_weight="1"
+                android:text=""
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
                 android:id="@+id/button_12"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:text=""/>
+                android:layout_weight="1"
+                android:text=""
+                tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
 
         <LinearLayout
@@ -111,25 +117,28 @@
                 android:id="@+id/button_20"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:text=""/>
+                android:layout_weight="1"
+                android:text=""
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
                 android:id="@+id/button_21"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:text=""/>
+                android:layout_weight="1"
+                android:text=""
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
                 android:id="@+id/button_22"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:text=""/>
+                android:layout_weight="1"
+                android:text=""
+                tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
     </LinearLayout>
 
@@ -141,7 +150,7 @@
         android:layout_gravity="center_horizontal"
 
         android:gravity="center"
-        android:text="RESET"
+        android:text="@string/reset"
         android:textSize="15pt"
         android:textStyle="bold"
         android:layout_margin="8dp"
