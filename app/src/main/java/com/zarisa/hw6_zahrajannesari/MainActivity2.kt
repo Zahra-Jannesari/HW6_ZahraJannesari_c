@@ -78,7 +78,7 @@ class MainActivity2 : AppCompatActivity(){
         }
         if (buttonArray[0][0].text!=""
             &&buttonArray[0][0].text==buttonArray[1][1].text
-            &&buttonArray[0][0]==buttonArray[2][2]){
+            &&buttonArray[0][0].text==buttonArray[2][2].text){
             return true
         }
         if (buttonArray[0][2].text!=""

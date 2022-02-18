@@ -19,10 +19,15 @@ class MainActivity : AppCompatActivity() ,RadioGroup.OnCheckedChangeListener {
         setContentView(view)
         sharedpreferences = getSharedPreferences("Information", Context.MODE_PRIVATE)
         binding.RadioGroupGender.setOnCheckedChangeListener(this)
-        binding.buttonRegister.setOnClickListener { registerButtonClick() }
-        binding.buttonShowInfo.setOnClickListener{showInfoButtonClick()}
-        binding.buttonHideInfo.setOnClickListener{hideInfoButtonClick()}
+        setListeners()
     }
+
+    private fun setListeners() {
+        binding.buttonRegister.setOnClickListener { registerButtonClick() }
+        binding.buttonShowInfo.setOnClickListener { showInfoButtonClick() }
+        binding.buttonHideInfo.setOnClickListener { hideInfoButtonClick() }
+    }
+
     override fun onCheckedChanged(p0: RadioGroup?, p1: Int) {
         val editor = sharedpreferences!!.edit()
         when(p1){
@@ -39,8 +44,10 @@ class MainActivity : AppCompatActivity() ,RadioGroup.OnCheckedChangeListener {
         }
     }
     private fun registerButtonClick(){
+        if (binding.textFieldPassword.text.toString()==binding.textFieldRetypePassword.text.toString()) {
         Toast.makeText(this,"Registered!", Toast.LENGTH_LONG).show()
-        val editor = sharedpreferences!!.edit()
+
+            val editor = sharedpreferences!!.edit()
             editor.putString("fullName", binding.textFieldFullName.text.toString())
             editor.apply()
             editor.putString("Username", binding.textFieldUsername.text.toString())
@@ -49,6 +56,10 @@ class MainActivity : AppCompatActivity() ,RadioGroup.OnCheckedChangeListener {
             editor.apply()
             editor.putString("Password", binding.textFieldPassword.text.toString())
             editor.apply()
+        }
+        else{
+            binding.textFieldRetypePassword.error="Passwords do not match"
+        }
     }
     private fun showInfoButtonClick() {
         binding.textViewFullName.text= sharedpreferences?.getString("fullName", "")
@@ -59,6 +70,6 @@ class MainActivity : AppCompatActivity() ,RadioGroup.OnCheckedChangeListener {
         binding.LinearLayoutInfo.visibility= View.VISIBLE
     }
     private fun hideInfoButtonClick(){
-        binding.LinearLayoutInfo.visibility= View.INVISIBLE
+        binding.LinearLayoutInfo.visibility= View.GONE
     }
 }
